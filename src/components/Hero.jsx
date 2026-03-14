@@ -162,7 +162,9 @@
 
 
 import { useState } from "react";
+import banner from "../assets/hero.png";
 
+<img src={banner} alt="banner" />
 export default function Hero() {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
@@ -178,7 +180,7 @@ export default function Hero() {
 
       {/* BG */}
       <img
-        src="/src/assets/hero.png"
+        src={banner}
         className="absolute w-full h-full object-cover"
       />
 
