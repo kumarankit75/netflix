@@ -113,13 +113,23 @@
 
 import { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import img1 from "../assets/trending/1.jpg";
+import img2 from "../assets/trending/2.jpg";
+import img3 from "../assets/trending/3.jpg";
+import img4 from "../assets/trending/4.jpg";
+import img5 from "../assets/trending/5.jpg";
+import img6 from "../assets/trending/6.jpg";
+import img7 from "../assets/trending/7.jpg";
 
 export default function Trending() {
 
   const scrollRef = useRef(null);
 
+  // const movies = [
+  //   "1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg"
+  // ];
   const movies = [
-    "1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg"
+    img1,img2,img3,img4,img5,img6,img7
   ];
 
   const scrollLeft = () => {
@@ -168,7 +178,7 @@ export default function Trending() {
           <div key={i} className="relative min-w-[160px] md:min-w-[200px]">
 
             <img
-              src={`/src/assets/trending/${img}`}
+              src={`${img}`}
               className="rounded-lg"
             />
 
