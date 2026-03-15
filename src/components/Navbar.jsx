@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+    const navigate = useNavigate();
+
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -28,7 +32,9 @@ export default function Navbar() {
             <option>English</option>
           </select>
 
-          <button className="bg-red-600 px-4 py-1 rounded text-white font-semibold">
+          <button className="bg-red-600 px-4 py-1 rounded text-white font-semibold"
+                   onClick={() => navigate("/register")} >
+ 
             Sign In
           </button>
 
